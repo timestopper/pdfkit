@@ -25,7 +25,7 @@ class PDFImage
     if data[0] is 0xff and data[1] is 0xd8
       return new JPEG(data, label)
       
-    else if data[0] is 0x89 and data.toString('ascii', 1, 4) is 'PNG'
+    else if data[0] is 0x89
       return new PNG(data, label)
       
     else
